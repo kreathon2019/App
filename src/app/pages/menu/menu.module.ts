@@ -13,18 +13,14 @@ const routes: Routes = [
     component: MenuPage,
     children: [
       {
-        path: 'register',
-        loadChildren: '../../register/register.module#RegisterPageModule' 
-      },
-      {
-        path: 'login',
-        loadChildren: '../../login/login.module#LoginPageModule'
+        path: 'user',
+        loadChildren: '../user/user.module#UserPageModule'
       }
     ]
   }, 
   {
     path: '',
-    redirectTo: '/menu/login'
+    redirectTo: '/login' // TODO: EMPTY PATH -> REDIRECT WHERE?
   }
 ];
 

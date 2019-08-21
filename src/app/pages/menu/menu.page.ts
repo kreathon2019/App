@@ -10,12 +10,8 @@ export class MenuPage implements OnInit {
 
   pages = [
     {
-      title: 'Login',
-      url: '/menu/login'
-    },
-    {
-      title: 'Register',
-      url: '/menu/register'
+      title: 'User',
+      url: '/menu/user'
     }
   ];
 
