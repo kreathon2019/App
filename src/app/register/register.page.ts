@@ -5,6 +5,9 @@ import { Router } from '@angular/router'
 
 import { AlertController } from '@ionic/angular'
 
+import { AngularFirestore } from '@angular/fire/firestore'
+import { UserService } from '../user.service';
+
 @Component({
   selector: 'app-register',
   templateUrl: './register.page.html',
@@ -19,9 +22,15 @@ export class RegisterPage implements OnInit {
 
   constructor(
     public afAuth: AngularFireAuth,
+<<<<<<< HEAD
     public alert: AlertController,
     public router: Router
     ) { }
+=======
+    public afStore: AngularFirestore,
+    public user: UserService
+  ) { }
+>>>>>>> userdata
 
   ngOnInit() {
   }
@@ -34,6 +43,20 @@ export class RegisterPage implements OnInit {
     }
     try {
       const res = await this.afAuth.auth.createUserWithEmailAndPassword(username, password)
+      const description = 'I like to make hackathons awesome!'  // Standard-Beschreibung
+
+      this.afStore.doc(`users/${res.user.uid}`).set({ // Erstelle in 'users'-"Verzeichnis" ein Dokument mit dem Wert des Usernamens
+        username,
+        description
+      })
+
+      if (res.user) {
+        this.user.setUser({
+          username,
+          uid: res.user.uid
+        })
+      }
+
       console.log(res)
       this.showAlert("Fertig!", "Sie wurden erfolgreich registriert!")
       this.router.navigate(['/login']); // zu login navigieren

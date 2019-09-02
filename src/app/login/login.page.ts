@@ -1,9 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { auth } from 'firebase/app';
+<<<<<<< HEAD
 import { Router } from '@angular/router'
 
 import { AlertController } from '@ionic/angular'
+=======
+import { UserService } from '../user.service';
+>>>>>>> userdata
 
 @Component({
   selector: 'app-login',
@@ -14,12 +18,16 @@ export class LoginPage implements OnInit {
 
   username: string = ""
   password: string = ""
+<<<<<<< HEAD
 
   constructor(
     public afAuth: AngularFireAuth,
     public alert: AlertController,
     public router: Router
     ) { }
+=======
+  constructor(public afAuth: AngularFireAuth, public user: UserService) { }
+>>>>>>> userdata
 
   ngOnInit() {
   }
@@ -28,7 +36,18 @@ export class LoginPage implements OnInit {
     const { username, password } = this
     try {
       const res = await this.afAuth.auth.signInWithEmailAndPassword(username, password)
+<<<<<<< HEAD
       this.router.navigate(['/menu/user']);
+=======
+      alert("herzlichen Glückwunsch")
+
+      if (res.user) {
+        this.user.setUser({
+          username,
+          uid: res.user.uid
+        })
+      }
+>>>>>>> userdata
     } catch(err) {
       console.dir(err)
       this.showAlert("Fehler", err.message)
