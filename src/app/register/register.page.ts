@@ -22,15 +22,11 @@ export class RegisterPage implements OnInit {
 
   constructor(
     public afAuth: AngularFireAuth,
-<<<<<<< HEAD
     public alert: AlertController,
-    public router: Router
-    ) { }
-=======
+    public router: Router,
     public afStore: AngularFirestore,
     public user: UserService
   ) { }
->>>>>>> userdata
 
   ngOnInit() {
   }

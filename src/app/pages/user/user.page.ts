@@ -25,8 +25,6 @@ export class UserPage implements OnInit {
     this.afStore.doc(`users/${this.user.getUID()}`).update({
       description
     })
-
-    alert('Done!')
   }
 
 }
