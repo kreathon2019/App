@@ -1,5 +1,3 @@
-
-
 const config = {
     apiKey: "AIzaSyDGeIbTXOgWN9IZTBqnLrP0pQw5VjhtE-E",
     authDomain: "kreathon-c73d1.firebaseapp.com",
