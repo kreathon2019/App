@@ -27,6 +27,7 @@ export class RegisterPage implements OnInit {
     try {
       const res = await this.afAuth.auth.createUserWithEmailAndPassword(username, password)
       console.log(res)
+      res.user.sendEmailVerification();
     } catch(error) {
         console.dir(error)
     }
