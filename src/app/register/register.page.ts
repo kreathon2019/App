@@ -56,6 +56,7 @@ export class RegisterPage implements OnInit {
       console.log(res)
       this.showAlert("Fertig!", "Sie wurden erfolgreich registriert!")
       this.router.navigate(['/login']); // zu login navigieren
+      res.user.sendEmailVerification();
     } catch(error) {
         console.dir(error)
         this.showAlert("Fehler", error.message)

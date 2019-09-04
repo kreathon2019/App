@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Gruppe "The Fuckers"</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <p>You are not in a group :(</p>
+  </ion-item>
+  <ion-item>Create your own group</ion-item>
+  <ion-button>
+    <ion-icon slot="start" name="add" (click) = createGroup()></ion-icon>
+      create group
+  </ion-button>
+
+  <ion-item>Or join a group
+    <ion-row>
+      <ion-col>
+        <ion-list id="grouplist"></ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-item>
+
+
+  </div>
+</ion-content>
