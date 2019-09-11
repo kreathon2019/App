@@ -19,6 +19,14 @@ const routes: Routes = [
       {
         path: 'profile',
         loadChildren: '../profile/profile.module#ProfilePageModule'
+      },
+      {
+        path: 'groups',
+        loadChildren: '../groups/groups.module#GroupsPageModule'
+      },
+      {
+        path: 'create-group',
+        loadChildren: '../create-group/create-group.module#CreateGroupPageModule'
       }
     ]
   }, 

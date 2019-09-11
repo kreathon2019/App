@@ -6,9 +6,10 @@ const routes: Routes = [
   { path: 'login', loadChildren: './login/login.module#LoginPageModule' },
   { path: 'register', loadChildren: './register/register.module#RegisterPageModule' },
   { path: 'user', loadChildren: './pages/user/user.module#UserPageModule' },
-  { path: '', loadChildren: './pages/menu/menu.module#MenuPageModule' },
   { path: 'profile', loadChildren: './pages/profile/profile.module#ProfilePageModule' },
-  { path: 'group', loadChildren: './pages/group/group.module#GroupPageModule' }
+  { path: '', loadChildren: './pages/menu/menu.module#MenuPageModule' },
+  { path: 'groups', loadChildren: './pages/groups/groups.module#GroupsPageModule' },
+  { path: 'create-group', loadChildren: './pages/create-group/create-group.module#CreateGroupPageModule' }
 
 ];
 
