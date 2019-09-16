@@ -40,9 +40,13 @@ export class RegisterPage implements OnInit {
     try {
       const res = await this.afAuth.auth.createUserWithEmailAndPassword(username, password)
       const description = 'I like to make hackathons awesome!'  // Standard-Beschreibung
+      const name = '(empty)'
+      const surname = '(empty)'
 
       this.afStore.doc(`users/${res.user.uid}`).set({ // Erstelle in 'users'-"Verzeichnis" ein Dokument mit dem Wert des Usernamens
         username,
+        name,
+        surname,
         description
       })
 
