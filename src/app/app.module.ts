@@ -17,7 +17,8 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { UserService } from './user.service';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 
-import { GroupService } from './services/group.service'
+import { GroupService } from './services/group.service';
+
 
 @NgModule({
   declarations: [AppComponent],

@@ -7,6 +7,8 @@ import { IonicModule } from '@ionic/angular';
 
 import { UserPage } from './user.page';
 
+import { NavbarComponent } from '../../components/navbar/navbar.component';
+
 const routes: Routes = [
   {
     path: '',
@@ -21,6 +23,6 @@ const routes: Routes = [
     IonicModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [UserPage]
+  declarations: [UserPage, NavbarComponent]
 })
 export class UserPageModule {}
