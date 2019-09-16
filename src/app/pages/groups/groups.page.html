@@ -5,18 +5,16 @@
 </ion-header>
 
 <ion-content>
-  <ion-item>
-    <p>You are not in a group :(</p>
-  </ion-item>
-  <ion-item>Create your own group</ion-item>
-  <ion-button routerLink='/menu/create-group'>
+  <div *ngIf="clicked">
+      <app-add-group></app-add-group>
+  </div>
+  
+  <ion-button (click)='createGroupClicked()'>
     <ion-icon slot="start" name="add"></ion-icon>
       create group
   </ion-button>
-  <ion-item>Or join a group
-    <ion-row>
-      <ion-col>
-      </ion-col>
-    </ion-row>
-  </ion-item>
+  <ion-item>Or join a group</ion-item>
+  <div>
+    <groups-selector></groups-selector>
+  </div>
 </ion-content>

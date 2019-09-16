@@ -7,7 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GroupsPage implements OnInit {
 
+  clicked: boolean = false;
+
   constructor() { }
+
+  createGroupClicked() {
+    this.clicked = !this.clicked;
+  }
 
   ngOnInit() {
   }

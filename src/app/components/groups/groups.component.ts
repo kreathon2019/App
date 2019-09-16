@@ -3,7 +3,7 @@ import { GroupService } from '../../services/group.service';
 import { Group } from '../../models/group';
 
 @Component({
-  selector: 'app-groups',
+  selector: 'groups-selector',
   templateUrl: './groups.component.html',
   styleUrls: ['./groups.component.scss'],
 })

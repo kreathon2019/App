@@ -1,4 +1,5 @@
-//Abfrage ob es mindestens eine Gruppe gibt
+
+
 <div *ngIf="groups?.length > 0;else noGroups">
   <ul *ngFor="let group of groups" class="collection">
     <li class="collection-item"><strong>{{group.title}}:</strong> {{group.description}}</li>
@@ -10,4 +11,3 @@
   <hr>
   <h5>There are no groups to list</h5>
 </ng-template>
-
