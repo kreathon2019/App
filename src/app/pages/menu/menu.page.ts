@@ -13,6 +13,12 @@ export class MenuPage implements OnInit {
       title: 'User',
       url: '/menu/user'
     },
+
+    {
+      title: 'Settings',
+      url: '/menu/settings'
+    },
+
     {
       title: 'Profil',
       url: '/menu/profile'

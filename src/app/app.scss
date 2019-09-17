@@ -4,3 +4,43 @@
 // styles are for the entire app and not just one component. Additionally, this 
 // file can hold Sass mixins, functions, and placeholder classes to be imported 
 // and used throughout the application.
+:root {
+    .kreathon-theme {                                       //theme name geändert zu kreathon-theme
+        --ion-color-primary: #E30613;
+        --ion-color-primary-rgb: 227,6,19;
+        --ion-color-primary-contrast: #404040;
+        --ion-color-primary-contrast-rgb: 0,0,25;
+        --ion-color-primary-shade: #fceced;
+        --ion-color-primary-tint: #ba0510;
+
+        ion-content {
+            --background: #77040b;
+        }
+
+        ion-toolbar {
+            --background: #0f2142;
+            --color: #fff;
+        }
+
+        ion-list {
+            --ion-item-background: #2c4b84;
+            --ion-item-color: #fff;
+
+            ion-list-header {
+                --color: #fff;
+            }
+        }
+
+        ion-card {
+            --color: #fff;
+            ion-card-title {
+                --color: #fff;
+            }
+        }
+
+        ion-tab-bar {
+            --background: #0f2142;
+            --color: #fff;
+        }
+    }
+}
