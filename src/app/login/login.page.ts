@@ -3,7 +3,7 @@ import { AngularFireAuth } from '@angular/fire/auth';
 import { auth } from 'firebase/app';
 import { Router } from '@angular/router'
 import { AlertController } from '@ionic/angular'
-import { UserService } from '../user.service';
+import { UserdataService } from '../services/userdata.service';
 
 @Component({
   selector: 'app-login',
@@ -19,7 +19,7 @@ export class LoginPage implements OnInit {
     public afAuth: AngularFireAuth,
     public alert: AlertController,
     public router: Router,
-    public user: UserService
+    public user: UserdataService
     ) { }
 
   ngOnInit() {
@@ -31,10 +31,8 @@ export class LoginPage implements OnInit {
       const res = await this.afAuth.auth.signInWithEmailAndPassword(username, password)
 
       if (res.user) {
-        this.user.setUser({
-          username,
-          uid: res.user.uid
-        })
+        this.user.setUser(res.user.uid)
+        console.log(`User found: ${res.user.uid}`)
       }
 
       this.router.navigate(['/menu/user']);

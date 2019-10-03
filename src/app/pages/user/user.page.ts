@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core'
 import { AngularFirestore } from '@angular/fire/firestore'
-import { UserService } from '../../user.service'
+import { UserdataService } from '../../services/userdata.service'
 
 @Component({
   selector: 'app-user',
@@ -13,7 +13,7 @@ export class UserPage implements OnInit {
 
   constructor(
     public afStore: AngularFirestore,
-    public user: UserService
+    public user: UserdataService
   ) { }
 
   ngOnInit() {
